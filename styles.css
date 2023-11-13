@@ -1,10 +1,38 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-}
-h1 {
-    color:red;
+  font-family: Arial, sans-serif;
+  margin: 20px;
 }
 p {
-    line-height: 1.6;
+  margin: 0;
+}
+h1,
+h2 {
+  margin: 0;
+  color: var(--hostinger-primary-base, #673de6);
+}
+p {
+  line-height: 1.6;
+}
+
+/* Margins */
+
+.h-my-32 {
+  margin: 32px 0;
+}
+
+.h-my-24 {
+  margin: 24px 0;
+}
+
+/* Text classes */
+
+.text-body-2 {
+  color: var(--gray-dark, #36344d);
+  font-feature-settings: "clig" off, "liga" off;
+  /* Body / Body 2 */
+  font-family: DM Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 171.429% */
 }
