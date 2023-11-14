@@ -44,6 +44,11 @@ body {
   margin-right: 8px;
 }
 
+
+.h-ml-32{
+  margin-left: 32px;
+}
+
 .h-mb-64 {
   margin-bottom: 64px;
 }
