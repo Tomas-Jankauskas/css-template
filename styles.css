@@ -1,17 +1,11 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
+  font-family: DM Sans;
 }
-p {
-  margin: 0;
-}
-h1,
-h2 {
-  margin: 0;
-  color:  #673de6;
-}
-p {
-  line-height: 1.6;
+
+/* Paddings */
+
+.p-24{
+  padding: 24px;
 }
 
 /* Margins */
@@ -24,10 +18,54 @@ p {
   margin: 24px 0;
 }
 
+.h-my-16 {
+  margin: 16px 0;
+}
+
+
+.h-mr-72{
+  margin-right: 72px;
+}
+
+.h-mr-16 {
+  margin-right: 16px;
+}
+
+.h-mr-8 {
+  margin-right: 8px;
+}
+
+.h-mb-64 {
+  margin-bottom: 64px;
+}
+
+.h-mb-32 {
+  margin-bottom: 32px;
+}
+
+.h-mb-24 {
+  margin-bottom: 24px;
+}
+
+.h-mb-16 {
+  margin-bottom: 16px;
+}
+
+.h-mb-8 {
+  margin-bottom: 8px;
+}
+
+.h-mb-4 {
+  margin-bottom: 4px;
+}
+
+.h-mb-0{
+  margin-bottom: 0;
+}
+
 /* Text classes */
 
 .text-body-2 {
-  color: #36344d;
   font-feature-settings: "clig" off, "liga" off;
   /* Body / Body 2 */
   font-family: DM Sans;
@@ -35,4 +73,86 @@ p {
   font-style: normal;
   font-weight: 400;
   line-height: 24px; /* 171.429% */
+}
+
+.text-body-3 {
+  font-feature-settings: "clig" off, "liga" off;
+  /* Body / Body 3 */
+  font-family: DM Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 166.667% */
+}
+
+.text-bold-2 {
+  font-feature-settings: "clig" off, "liga" off;
+  /* Bold / Bold 2 */
+  font-family: DM Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 171.429% */
+}
+
+.text-bold-3 {
+  font-feature-settings: "clig" off, "liga" off;
+  /* Bold / Bold 3 */
+  font-family: DM Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 166.667% */
+}
+
+.text-heading-2 {
+  font-feature-settings: "clig" off, "liga" off;
+  /* Heading / Heading 2 */
+  font-family: DM Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px; /* 160% */
+}
+
+/* Text colors */
+
+.text-color-success {
+  color: #00b090;
+}
+
+.text-color-dark {
+  color: #1d1e20;
+}
+
+.text-color-gray{
+  color:#727586;
+}
+
+.text-color-primary {
+  color: #673de6;
+}
+
+/* Background colors */
+
+
+.background-success-light{
+  background-color: #DEF4F0;
+}
+
+
+/* Custom classes */
+
+.page-number {
+  color: #727586;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+
+.page-header {
+  display: flex;
+  color: #727586;
+  width: 100%;
+  justify-content: space-between;
 }
