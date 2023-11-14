@@ -1,7 +1,7 @@
 body {
   font-family: DM Sans;
   height: 100%;
-  padding:24px 80px;
+  padding: 0 80px 24px 80px;
 }
 
 /* Paddings */
@@ -32,7 +32,7 @@ body {
   margin-right: 72px;
 }
 
-.h-mr-32{
+.h-mr-32 {
   margin-right: 32px;
 }
 
@@ -44,8 +44,7 @@ body {
   margin-right: 8px;
 }
 
-
-.h-ml-32{
+.h-ml-32 {
   margin-left: 32px;
 }
 

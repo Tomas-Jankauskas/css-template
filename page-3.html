@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://tomas-jankauskas.github.io/css-template/styles.css"
+    />
+    <style>
+      .score-cell {
+        width: 210px;
+      }
+    </style>
+
+    <title>Performance report</title>
+  </head>
+
+  <body>
+    <h1 class="h-my-32">Performance report</h1>
+
+    <section class="h-mb-64 d-flex flex-column h-mb-64">
+      <div class="d-flex align-items-center h-mb-4">
+        <svg
+          class="h-mr-8 align-items-center"
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+        >
+          <circle cx="8" cy="8" r="8" fill="#00B090" />
+        </svg>
+
+        <span class="text-color-dark align-items-center text-body-2"
+          >{{$score}}</span
+        >
+      </div>
+      <div class="text-color-dark text-bold-2 h-mb-4">{{$domain}}</div>
+      <div class="text-color-dark text-body-2 h-mb-4">
+        Last scan on {{$date}}
+      </div>
+      <div class="text-color-dark text-body-2">{{$device}} device</div>
+    </section>
+
+    <section class="h-mb-64">
+      <div class="d-flex flex-column">
+        <!-- Row 1 -->
+        <div class="d-flex h-mb-24">
+          <div class="d-flex flex-column score-cell">
+            <div class="d-flex align-items-center h-mb-8">
+              <svg
+                class="h-mr-8 align-items-center"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <circle cx="8" cy="8" r="8" fill="#00B090" />
+              </svg>
+
+              <span class="text-color-dark text-body-3"
+                >First contentful paint</span
+              >
+            </div>
+
+            <div class="text-color-success text-bold-3 align-items-center">
+              {{$paintTime}}s
+            </div>
+          </div>
+
+          <div class="d-flex flex-column score-cell">
+            <div class="h-mb-8 d-flex align-items-center">
+              <svg
+                class="h-mr-8 align-items-center"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <circle cx="8" cy="8" r="8" fill="#00B090" />
+              </svg>
+
+              <span class="text-color-dark text-body-3"
+                >Largest contentful paint</span
+              >
+            </div>
+
+            <div class="text-color-success text-bold-3 align-items-center">
+              {{$paintTime}}s
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2-->
+        <div class="d-flex h-mb-24">
+          <div class="d-flex flex-column score-cell">
+            <div class="h-mb-8 d-flex align-items-center">
+              <svg
+                class="h-mr-8 align-items-center"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <circle cx="8" cy="8" r="8" fill="#00B090" />
+              </svg>
+
+              <div class="text-color-dark align-items-center text-body-3">
+                Total blocking time
+              </div>
+            </div>
+
+            <div class="text-color-success text-bold-3">{{$paintTime}}s</div>
+          </div>
+
+          <div class="d-flex flex-column score-cell">
+            <div class="h-mb-8 d-flex align-items-center">
+              <svg
+                class="h-mr-8 align-items-center"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <circle cx="8" cy="8" r="8" fill="#00B090" />
+              </svg>
+
+              <span class="text-color-dark text-body-3 align-items-center"
+                >Speed index</span
+              >
+            </div>
+
+            <div class="text-color-success text-bold-3">{{$paintTime}}s</div>
+          </div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="d-flex">
+          <div class="d-flex flex-column score-cell">
+            <div class="h-mb-8 d-flex align-items-center">
+              <svg
+                class="h-mr-8 align-items-center"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <circle cx="8" cy="8" r="8" fill="#00B090" />
+              </svg>
+
+              <span class="text-color-dark text-body-3 align-items-center"
+                >Time to interactive</span
+              >
+            </div>
+
+            <div class="text-color-success text-bold-3">{{$paintTime}}s</div>
+          </div>
+
+          <div class="d-flex flex-column score-cell">
+            <div class="h-mb-8 d-flex align-items-center">
+              <svg
+                class="h-mr-8 align-items-center"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <circle cx="8" cy="8" r="8" fill="#00B090" />
+              </svg>
+
+              <span class="text-color-dark text-body-3 align-items-center"
+                >Cumulative layout shift</span
+              >
+            </div>
+
+            <div class="text-color-success text-bold-3">{{$paintTime}}s</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Example PDF</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://tomas-jankauskas.github.io/css-template/styles.css"
+    />
+    <title>Report summary</title>
+  </head>
 
-</head>
-<link rel="stylesheet" type="text/css" href="./styles.css">
-
-<body>
-    <h1>Hello, World!</h1>
-    <p>This is an example PDF generated using wkhtmltopdf with inline CSS.</p>
-</body>
+  <body>
+    <h1 class="text-color-primary">{{$title}}</h1>
+    <p class="h-my-32 text-body-2">
+      This is the summary of your website’s health and all the work we have done
+      to keep it up do date and well performing for the last 30 days. If you
+      have any questions, please feel free to contact us.
+    </p>
+    <p class="text-body-2 h-m-0">{{$company}}</p>
+    <p class="text-body-2 h-m-0">{{$email}}</p>
+    <p class="text-body-2 h-m-0">{{$phone}}</p>
+  </body>
 </html>

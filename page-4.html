@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://tomas-jankauskas.github.io/css-template/styles.css"
+    />
+
+    <title>Security report</title>
+  </head>
+
+  <body>
+    <h1 class="h-my-32 text-color-primary">Security</h1>
+
+    <section class="h-mb-64">
+      <div class="d-flex align-items-center h-mb-8">
+        <svg
+          class="h-mr-8"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"
+            fill="#00B090"
+          />
+        </svg>
+
+        <div class="text-body-2 align-items-center">SSL is installed</div>
+      </div>
+
+      <div class="d-flex align-items-center h-mb-8">
+        <svg
+          class="h-mr-8"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"
+            fill="#00B090"
+          />
+        </svg>
+
+        <div class="text-body-2 align-items-center">
+          Website is up to date with WordPress {{ $version }}
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center h-mb-8">
+        <svg
+          class="h-mr-8"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"
+            fill="#00B090"
+          />
+        </svg>
+
+        <div class="text-body-2 align-items-center">
+          No malware was found over the last {{ $days }} days
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

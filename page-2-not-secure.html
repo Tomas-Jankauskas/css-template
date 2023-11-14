@@ -3,16 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
     <link
       rel="stylesheet"
-      type="text/css"
-      href="https://tomas-jankauskas.github.io/css-template/styles.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
     />
-    <title>Report overview</title>
+
+    <title>Example PDF</title>
   </head>
 
   <body>
-    <h1 class="h-my-32 text-color-primary">Overview</h1>
+    <div class="page-header text-body-3">
+      <p>{domain name}</p>
+      <p>{YYYY-MM-DD}</p>
+    </div>
+
+    <h1 class="h-my-32">Overview</h1>
 
     <section class="h-mb-64">
       <h3 class="h-mb-16">Performance score</h3>
@@ -29,7 +37,7 @@
           <circle cx="8" cy="8" r="8" fill="#00B090" />
         </svg>
 
-        <span class="text-body-2 align-items-center">{{$score}}</span>
+        <span class="text-body-2">{score}</span>
       </div>
     </section>
 
@@ -48,12 +56,12 @@
           <path
             fill-rule="evenodd"
             clip-rule="evenodd"
-            d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"
-            fill="#00B090"
+            d="M12 2C6.47 2 2 6.47 2 12C2 17.53 6.47 22 12 22C17.53 22 22 17.53 22 12C22 6.47 17.53 2 12 2ZM17 15.59L15.59 17L12 13.41L8.41 17L7 15.59L10.59 12L7 8.41L8.41 7L12 10.59L15.59 7L17 8.41L13.41 12L17 15.59Z"
+            fill="#FC5185"
           />
         </svg>
 
-        <span class="text-body-2 align-items-center">Website is secure</span>
+        <span class="text-body-2">Website is not secure</span>
       </div>
 
       <div class="d-flex align-items-center h-mb-8">
@@ -68,12 +76,12 @@
           <path
             fill-rule="evenodd"
             clip-rule="evenodd"
-            d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"
-            fill="#00B090"
+            d="M12 2C6.47 2 2 6.47 2 12C2 17.53 6.47 22 12 22C17.53 22 22 17.53 22 12C22 6.47 17.53 2 12 2ZM17 15.59L15.59 17L12 13.41L8.41 17L7 15.59L10.59 12L7 8.41L8.41 7L12 10.59L15.59 7L17 8.41L13.41 12L17 15.59Z"
+            fill="#FC5185"
           />
         </svg>
 
-        <span class="text-body-2 align-items-center">SSL is installed</span>
+        <span class="text-body-2">SSL is not installed</span>
       </div>
 
       <div class="d-flex align-items-center h-mb-8">
@@ -88,14 +96,12 @@
           <path
             fill-rule="evenodd"
             clip-rule="evenodd"
-            d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"
-            fill="#00B090"
+            d="M12 2C6.47 2 2 6.47 2 12C2 17.53 6.47 22 12 22C17.53 22 22 17.53 22 12C22 6.47 17.53 2 12 2ZM17 15.59L15.59 17L12 13.41L8.41 17L7 15.59L10.59 12L7 8.41L8.41 7L12 10.59L15.59 7L17 8.41L13.41 12L17 15.59Z"
+            fill="#FC5185"
           />
         </svg>
 
-        <span class="text-body-2 align-items-center"
-          >WordPress is up to date</span
-        >
+        <span class="text-body-2">WordPress is not up to date</span>
       </div>
 
       <div class="d-flex align-items-center h-mb-8">
@@ -110,21 +116,21 @@
           <path
             fill-rule="evenodd"
             clip-rule="evenodd"
-            d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"
-            fill="#00B090"
+            d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z"
+            fill="#FEA419"
           />
         </svg>
 
-        <span class="text-body-2 align-items-center"
-          >Malware was not found</span
-        >
+        <span class="text-body-2">{x} cases of malware were found and automatically cleaned over the last {x days}</span>
       </div>
     </section>
 
     <section class="h-mb-64">
       <h3 class="h-mb-16">Backups</h3>
-      <p class="text-body-2 h-mb-8">Number of backups {{$number}}</p>
-      <p class="text-body-2 h-m-0">Frequency: {{$frequency}}</p>
+      <p class="text-body-2 h-mb-8">Number of backups {x}</p>
+      <p class="text-body-2">Frequency: {Daily/Weeklyy}</p>
     </section>
+
+    <p class="page-number text-body-3">2/5</p>
   </body>
 </html>

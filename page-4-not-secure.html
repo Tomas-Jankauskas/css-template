@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://tomas-jankauskas.github.io/css-template/styles.css"
+    />
+
+    <title>Security report</title>
+  </head>
+
+  <body>
+    <h1 class="h-my-32 text-color-primary">Security</h1>
+
+    <section class="h-mb-32">
+      <div class="d-flex align-items-center h-mb-8">
+        <svg
+          class="h-mr-8"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M12 2C6.47 2 2 6.47 2 12C2 17.53 6.47 22 12 22C17.53 22 22 17.53 22 12C22 6.47 17.53 2 12 2ZM17 15.59L15.59 17L12 13.41L8.41 17L7 15.59L10.59 12L7 8.41L8.41 7L12 10.59L15.59 7L17 8.41L13.41 12L17 15.59Z"
+            fill="#FC5185"
+          />
+        </svg>
+
+        <span class="text-body-2 align-items-center">SSL is not installed</span>
+      </div>
+
+      <div class="d-flex align-items-center h-mb-8">
+        <svg
+          class="h-mr-8"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M12 2C6.47 2 2 6.47 2 12C2 17.53 6.47 22 12 22C17.53 22 22 17.53 22 12C22 6.47 17.53 2 12 2ZM17 15.59L15.59 17L12 13.41L8.41 17L7 15.59L10.59 12L7 8.41L8.41 7L12 10.59L15.59 7L17 8.41L13.41 12L17 15.59Z"
+            fill="#FC5185"
+          />
+        </svg>
+
+        <span class="text-body-2 align-items-center"
+          >Website is not up to date with WordPress {{$version}}</span
+        >
+      </div>
+
+      <div class="d-flex align-items-center h-mb-8">
+        <svg
+          class="h-mr-8"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z"
+            fill="#FEA419"
+          />
+        </svg>
+
+        <span class="text-body-2 align-items-center"
+          >{x} cases of malware were found and automatically cleaned over the
+          last {{$days}}</span
+        >
+      </div>
+    </section>
+
+    <section class="h-mb-24">
+      <div class="d-flex">
+        <div class="d-flex flex-column h-mr-72">
+          <h2 class="text-color-dark text-heading-2 h-m-0">{number}</h2>
+          <span class="text-body-2">Total</span>
+        </div>
+
+        <div class="d-flex flex-column">
+          <div class="text-body-2 h-mb-8">
+            Malicious files ({{$percentage}}%)
+          </div>
+
+          <div class="text-body-2">Compromised files ({{$percentage}}%)</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="background-success-light">
+      <div class="d-flex p-24 justify-content-between">
+        <div class="d-flex flex-column">
+          <div class="text-color-dark text-heading-3 h-mb-4">{{$number}}</div>
+          <div class="text-bold-3 h-mb-4">Removed files</div>
+          <p class="text-body-3 text-color-gray h-m-0">
+            Malware files were removed without affecting the website
+          </p>
+        </div>
+
+        <div class="d-flex flex-column">
+          <div class="text-color-dark text-heading-3 h-mb-4">{{$number}}</div>
+          <div class="text-bold-3 h-mb-4">Cleaned files</div>
+          <p class="text-body-3 text-color-gray h-m-0">
+            Malicious part of code was removed from affected files
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
