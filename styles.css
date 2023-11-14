@@ -153,9 +153,12 @@ body {
 
 .page-header {
   display: flex;
+  display: -webkit-box; /* wkhtmltopdf uses this one */
   color: #727586;
   width: 100%;
   justify-content: space-between;
+  -webkit-box-pack: justify;
+
 }
 
 /* Flexbox classes */
