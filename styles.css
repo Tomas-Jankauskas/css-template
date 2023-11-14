@@ -152,7 +152,7 @@ body {
 }
 
 .page-header {
-  display: flex;
+  display: -webkit-box; 
   color: #727586;
   width: 100%;
   justify-content: space-between;
@@ -162,27 +162,20 @@ body {
 
 .d-flex {
   display: -webkit-box; /* wkhtmltopdf uses this one */
-  display: flex;
-  display: flex;
 }
 
 .flex-column {
-  flex-direction: column;
   -webkit-box-orient: vertical;
 }
 
 .justify-content-between {
   -webkit-box-pack: justify;
-
-  justify-content: space-between;
 }
 
 .justify-content-center {
   -webkit-box-pack: center; /* wkhtmltopdf uses this one */
-  justify-content: center;
 }
 
 .align-items-center {
-  align-items: center;
   -webkit-box-align: center;
 }
