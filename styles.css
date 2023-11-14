@@ -10,6 +10,11 @@ body {
 
 /* Margins */
 
+
+.h-m-0{
+  margin: 0;
+}
+
 .h-my-32 {
   margin: 32px 0;
 }
@@ -154,5 +159,21 @@ body {
   display: flex;
   color: #727586;
   width: 100%;
+  justify-content: space-between;
+}
+
+
+/* Flexbox classes */
+
+.d-flex{
+  display: flex;
+}
+
+.flex-column{
+  flex-direction: column;
+}
+
+
+.justify-content-between{
   justify-content: space-between;
 }
