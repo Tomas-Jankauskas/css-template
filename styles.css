@@ -4,14 +4,13 @@ body {
 
 /* Paddings */
 
-.p-24{
+.p-24 {
   padding: 24px;
 }
 
 /* Margins */
 
-
-.h-m-0{
+.h-m-0 {
   margin: 0;
 }
 
@@ -27,8 +26,7 @@ body {
   margin: 16px 0;
 }
 
-
-.h-mr-72{
+.h-mr-72 {
   margin-right: 72px;
 }
 
@@ -64,7 +62,7 @@ body {
   margin-bottom: 4px;
 }
 
-.h-mb-0{
+.h-mb-0 {
   margin-bottom: 0;
 }
 
@@ -130,8 +128,8 @@ body {
   color: #1d1e20;
 }
 
-.text-color-gray{
-  color:#727586;
+.text-color-gray {
+  color: #727586;
 }
 
 .text-color-primary {
@@ -140,11 +138,9 @@ body {
 
 /* Background colors */
 
-
-.background-success-light{
-  background-color: #DEF4F0;
+.background-success-light {
+  background-color: #def4f0;
 }
-
 
 /* Custom classes */
 
@@ -162,18 +158,16 @@ body {
   justify-content: space-between;
 }
 
-
 /* Flexbox classes */
 
-.d-flex{
+.d-flex {
   display: flex;
 }
 
-.flex-column{
+.flex-column {
   flex-direction: column;
 }
 
-
-.justify-content-between{
+.justify-content-between {
   justify-content: space-between;
 }
