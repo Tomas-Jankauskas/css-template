@@ -3,12 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="./styles.css" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
+      type="text/css"
+      href="https://tomas-jankauskas.github.io/css-template/styles.css"
     />
 
     <title>Example PDF</title>
@@ -121,7 +119,10 @@
           />
         </svg>
 
-        <span class="text-body-2">{x} cases of malware were found and automatically cleaned over the last {x days}</span>
+        <span class="text-body-2"
+          >{x} cases of malware were found and automatically cleaned over the
+          last {x days}</span
+        >
       </div>
     </section>
 
@@ -131,6 +132,6 @@
       <p class="text-body-2">Frequency: {Daily/Weeklyy}</p>
     </section>
 
-    <p class="page-number text-body-3">2/5</p>
+    <div class="page-footer text-body-3">{{$page}}/5</div>
   </body>
 </html>
