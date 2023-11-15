@@ -1,6 +1,6 @@
 body {
   font-family: DM Sans;
-  height: 100%;
+  height: 1015px;
   padding: 0 80px 24px 80px;
 }
 
@@ -195,4 +195,11 @@ body {
   display: -webkit-box;
   -webkit-box-align: center;
   align-items: center;
+}
+
+.page-footer {
+  color: #727586;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
