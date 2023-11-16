@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Report summary</title>
+    <style>
+      body {
+        font-family: DM Sans;
+      }
+
+      .page {
+        padding: 24px 80px;
+      }
+
+      /* Paddings */
+
+      .p-24 {
+        padding: 24px;
+      }
+
+      /* Margins */
+
+      .h-m-0 {
+        margin: 0;
+      }
+
+      .h-my-32 {
+        margin: 32px 0;
+      }
+
+      .h-my-24 {
+        margin: 24px 0;
+      }
+
+      .h-my-16 {
+        margin: 16px 0;
+      }
+
+      .h-mr-72 {
+        margin-right: 72px;
+      }
+
+      .h-mr-32 {
+        margin-right: 32px;
+      }
+
+      .h-mr-16 {
+        margin-right: 16px;
+      }
+
+      .h-mr-8 {
+        margin-right: 8px;
+      }
+
+      .h-ml-32 {
+        margin-left: 32px;
+      }
+
+      .h-mb-64 {
+        margin-bottom: 64px;
+      }
+
+      .h-mb-32 {
+        margin-bottom: 32px;
+      }
+
+      .h-mb-24 {
+        margin-bottom: 24px;
+      }
+
+      .h-mb-16 {
+        margin-bottom: 16px;
+      }
+
+      .h-mb-8 {
+        margin-bottom: 8px;
+      }
+
+      .h-mb-4 {
+        margin-bottom: 4px;
+      }
+
+      .h-mb-0 {
+        margin-bottom: 0;
+      }
+
+      /* Text classes */
+
+      .text-body-2 {
+        font-feature-settings: "clig" off, "liga" off;
+        /* Body / Body 2 */
+        font-family: DM Sans;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 171.429% */
+      }
+
+      .text-body-3 {
+        font-feature-settings: "clig" off, "liga" off;
+        /* Body / Body 3 */
+        font-family: DM Sans;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 166.667% */
+      }
+
+      .text-bold-2 {
+        font-feature-settings: "clig" off, "liga" off;
+        /* Bold / Bold 2 */
+        font-family: DM Sans;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px; /* 171.429% */
+      }
+
+      .text-bold-3 {
+        font-feature-settings: "clig" off, "liga" off;
+        /* Bold / Bold 3 */
+        font-family: DM Sans;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px; /* 166.667% */
+      }
+
+      .text-heading-2 {
+        font-feature-settings: "clig" off, "liga" off;
+        /* Heading / Heading 2 */
+        font-family: DM Sans;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 32px; /* 160% */
+      }
+
+      /* Text colors */
+
+      .text-color-success {
+        color: #00b090;
+      }
+
+      .text-color-dark {
+        color: #1d1e20;
+      }
+
+      .text-color-gray {
+        color: #727586;
+      }
+
+      .text-color-primary {
+        color: #673de6;
+      }
+
+      /* Background colors */
+
+      .background-success-light {
+        background-color: #def4f0;
+      }
+
+      /* Custom classes */
+
+      .page-number {
+        color: #727586;
+        display: -webkit-box;
+        -webkit-box-pack: center;
+      }
+
+      .page-header {
+        display: flex;
+        display: -webkit-box; /* wkhtmltopdf uses this one */
+        color: #727586;
+        width: 100%;
+        justify-content: space-between;
+        -webkit-box-pack: justify;
+      }
+
+      /* Flexbox classes */
+
+      .d-flex {
+        display: -webkit-box; /* wkhtmltopdf uses this one */
+        display: flex;
+      }
+
+      .flex-column {
+        flex-direction: column;
+        -webkit-box-orient: vertical;
+      }
+
+      .justify-content-between {
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+      }
+
+      .justify-content-center {
+        -webkit-box-pack: center; /* wkhtmltopdf uses this one */
+        justify-content: center;
+      }
+
+      .align-items-center {
+        display: -webkit-box;
+        -webkit-box-align: center;
+        align-items: center;
+      }
+
+      .score-cell {
+        width: 210px;
+      }
+
+      .page-break {
+        page-break-after: always;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page">
+      <h1 class="text-color-primary">My Website Report (WOW)</h1>
+      <p class="h-my-32 text-body-2">Its a report. It reports things.</p>
+      <p class="text-body-2 h-m-0">Report Generator Inc.</p>
+      <p class="text-body-2 h-m-0">electronic@mail.com</p>
+      <p class="text-body-2 h-m-0">here is my number (call me maybe)</p>
+    </div>
+    <div class="page-break"></div>
+    <div class="page">
+      <div class="page-header text-body-3">
+        <p>example.com</p>
+        <p>2023-11-14 17:42:05</p>
+      </div>
+
+      <h1 class="h-my-32 text-color-primary">Overview</h1>
+
+      <section class="h-mb-64">
+        <h3 class="h-mb-16">Performance score</h3>
+
+        <div class="d-flex align-items-center h-mb-8">
+          <svg
+            class="h-mr-8"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+          >
+            <circle cx="8" cy="8" r="8" fill="#00B090" />
+          </svg>
+
+          <span class="text-body-2 align-items-center">98</span>
+        </div>
+      </section>
+
+      <section class="h-mb-64">
+        <h3 class="h-mb-16">Security</h3>
+
+        <div class="d-flex align-items-center h-mb-8">
+          <svg
+            class="h-mr-8"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"
+              fill="#00B090"
+            />
+          </svg>
+
+          <span class="text-body-2 align-items-center">Website is secure</span>
+        </div>
+
+        <div class="d-flex align-items-center h-mb-8">
+          <svg
+            class="h-mr-8"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"
+              fill="#00B090"
+            />
+          </svg>
+
+          <span class="text-body-2 align-items-center">SSL is installed</span>
+        </div>
+
+        <div class="d-flex align-items-center h-mb-8">
+          <svg
+            class="h-mr-8"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"
+              fill="#00B090"
+            />
+          </svg>
+
+          <span class="text-body-2 align-items-center"
+            >WordPress is up to date</span
+          >
+        </div>
+
+        <div class="d-flex align-items-center h-mb-8">
+          <svg
+            class="h-mr-8"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z"
+              fill="#FEA419"
+            />
+          </svg>
+
+          <span class="text-body-2 align-items-center"
+            >30 cases of malware were found and automatically cleaned over the
+            last 30 days</span
+          >
+        </div>
+      </section>
+
+      <section class="h-mb-64">
+        <h3 class="h-mb-16">Backups</h3>
+        <p class="text-body-2 h-mb-8">Number of backups 10</p>
+        <p class="text-body-2 h-m-0">Frequency: Daily</p>
+      </section>
+    </div>
+    <div class="page-break"></div>
+    <div class="page">
+      <div class="page-header text-body-3">
+        <p>example.com</p>
+        <p>2023-11-14 17:42:05</p>
+      </div>
+
+      <h1 class="h-my-32 text-color-primary">Performance report</h1>
+
+      <section class="h-mb-64 d-flex flex-column h-mb-64">
+        <div class="d-flex align-items-center h-mb-4">
+          <svg
+            class="h-mr-8 align-items-center"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+          >
+            <circle cx="8" cy="8" r="8" fill="#00B090" />
+          </svg>
+
+          <span class="text-color-dark align-items-center text-body-2">98</span>
+        </div>
+        <div class="text-color-dark text-bold-2 h-mb-4">example.com</div>
+        <div class="text-color-dark text-body-2 h-mb-4">
+          Last scan on 2023-11-14 17:42:05
+        </div>
+        <div class="text-color-dark text-body-2">Desktop device</div>
+      </section>
+
+      <section class="h-mb-64">
+        <div class="d-flex flex-column">
+          <!-- Row 1 -->
+          <div class="d-flex h-mb-24">
+            <div class="d-flex flex-column score-cell">
+              <div class="d-flex align-items-center h-mb-8">
+                <svg
+                  class="h-mr-8 align-items-center"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <circle cx="8" cy="8" r="8" fill="#00B090" />
+                </svg>
+
+                <span class="text-color-dark text-body-3"
+                  >First contentful paint</span
+                >
+              </div>
+
+              <div class="text-color-success text-bold-3 align-items-center">
+                0.6 s
+              </div>
+            </div>
+
+            <div class="d-flex flex-column score-cell">
+              <div class="h-mb-8 d-flex align-items-center">
+                <svg
+                  class="h-mr-8 align-items-center"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <circle cx="8" cy="8" r="8" fill="#00B090" />
+                </svg>
+
+                <span class="text-color-dark text-body-3"
+                  >Largest contentful paint</span
+                >
+              </div>
+
+              <div class="text-color-success text-bold-3 align-items-center">
+                0.7 s
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 2-->
+          <div class="d-flex h-mb-24">
+            <div class="d-flex flex-column score-cell">
+              <div class="h-mb-8 d-flex align-items-center">
+                <svg
+                  class="h-mr-8 align-items-center"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <circle cx="8" cy="8" r="8" fill="#00B090" />
+                </svg>
+
+                <div class="text-color-dark align-items-center text-body-3">
+                  Total blocking time
+                </div>
+              </div>
+
+              <div class="text-color-success text-bold-3">0 ms</div>
+            </div>
+
+            <div class="d-flex flex-column score-cell">
+              <div class="h-mb-8 d-flex align-items-center">
+                <svg
+                  class="h-mr-8 align-items-center"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <circle cx="8" cy="8" r="8" fill="#00B090" />
+                </svg>
+
+                <span class="text-color-dark text-body-3 align-items-center"
+                  >Speed index</span
+                >
+              </div>
+
+              <div class="text-color-success text-bold-3">1.2 s</div>
+            </div>
+          </div>
+
+          <!-- Row 3 -->
+          <div class="d-flex">
+            <div class="d-flex flex-column score-cell">
+              <div class="h-mb-8 d-flex align-items-center">
+                <svg
+                  class="h-mr-8 align-items-center"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <circle cx="8" cy="8" r="8" fill="#00B090" />
+                </svg>
+
+                <span class="text-color-dark text-body-3 align-items-center"
+                  >Time to interactive</span
+                >
+              </div>
+
+              <div class="text-color-success text-bold-3">0.6 s</div>
+            </div>
+
+            <div class="d-flex flex-column score-cell">
+              <div class="h-mb-8 d-flex align-items-center">
+                <svg
+                  class="h-mr-8 align-items-center"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <circle cx="8" cy="8" r="8" fill="#00B090" />
+                </svg>
+
+                <span class="text-color-dark text-body-3 align-items-center"
+                  >Cumulative layout shift</span
+                >
+              </div>
+
+              <div class="text-color-success text-bold-3">0</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="page-break"></div>
+    <div class="page">
+      <div class="page-header text-body-3">
+        <p>example.com</p>
+        <p>2023-11-14 17:42:05</p>
+      </div>
+
+      <h1 class="h-my-32 text-color-primary">Security</h1>
+
+      <section class="h-mb-64">
+        <div class="d-flex align-items-center h-mb-8">
+          <svg
+            class="h-mr-8"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"
+              fill="#00B090"
+            />
+          </svg>
+
+          <div class="text-body-2 align-items-center">SSL is installed</div>
+        </div>
+
+        <div class="d-flex align-items-center h-mb-8">
+          <svg
+            class="h-mr-8"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"
+              fill="#00B090"
+            />
+          </svg>
+
+          <div class="text-body-2 align-items-center">
+            WordPress is up to date
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center h-mb-8">
+          <svg
+            class="h-mr-8"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z"
+              fill="#FEA419"
+            />
+          </svg>
+
+          <span class="text-body-2 align-items-center">
+            30 cases of malware were found and automatically cleaned over the
+            last 30
+          </span>
+        </div>
+      </section>
+
+      <section class="h-mb-24">
+        <div class="d-flex">
+          <div class="d-flex flex-column h-mr-72">
+            <h2 class="text-color-dark text-heading-2 h-m-0">30</h2>
+            <span class="text-body-2">Total</span>
+          </div>
+
+          <div class="d-flex flex-column">
+            <div class="text-body-2 h-mb-8">Malicious files (33%)</div>
+
+            <div class="text-body-2">Compromised files (67%)</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="background-success-light">
+        <div class="d-flex p-24 justify-content-between">
+          <div class="d-flex flex-column">
+            <div class="text-color-dark text-heading-3 h-mb-4">10</div>
+            <div class="text-bold-3 h-mb-4">Removed files</div>
+            <p class="text-body-3 text-color-gray h-m-0">
+              Malware files were removed without affecting the website
+            </p>
+          </div>
+
+          <div class="d-flex flex-column">
+            <div class="text-color-dark text-heading-3 h-mb-4">20</div>
+            <div class="text-bold-3 h-mb-4">Cleaned files</div>
+            <p class="text-body-3 text-color-gray h-m-0">
+              Malicious part of code was removed from affected files
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="page-break"></div>
+    <div class="page">
+      <div class="page-header text-body-3">
+        <p>example.com</p>
+        <p>2023-11-14 17:42:05</p>
+      </div>
+
+      <h1 class="h-my-32 text-color-primary">Backups</h1>
+
+      <h3 class="text-bold-2 h-mb-24 text-color-dark">Frequency: Daily</h3>
+
+      <section>
+        <div class="d-flex flex-column">
+          <span class="h-mb-8 text-body-2 text-color-dark">
+            2023-11-13 11:42:05
+          </span>
+        </div>
+        <div class="d-flex flex-column">
+          <span class="h-mb-8 text-body-2 text-color-dark">
+            2023-11-14 17:42:05
+          </span>
+        </div>
+        <div class="d-flex flex-column">
+          <span class="h-mb-8 text-body-2 text-color-dark">
+            2023-11-15 16:02:05
+          </span>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

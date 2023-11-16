@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<script>
+  window.onload = function () {
+    var vars = {};
+    var x = document.location.search.substring(1).split("&");
+    for (var i in x) {
+      var z = x[i].split("=", 2);
+      vars[z[0]] = unescape(z[1]);
+    }
+    document.querySelectorAll(".page-footer")[0].textContent =
+      vars["page"] + "/" + "5";
+  };
+</script>
+
+<style>
+  .page-footer {
+    color: #727586;
+    font-size: 12px;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    padding-bottom: 24px;
+  }
+</style>
+
+<div class="page-footer"></div>
